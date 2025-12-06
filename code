@@ -1,0 +1,28 @@
+import random
+colors = ["Red", "Blue", "Black", "White", "Pink", "Yellow", "Green", "Purple"]
+patterns = ["Floral", "Geometric", "Abstract", "Striped", "Polka Dots", "Digital Print"]
+outfits = ["Dress", "Kurta", "Top", "Saree", "Shirt", "Hoodie", "Gown", "Skirt"]
+styles = ["Modern", "Traditional", "Fusion", "Party Wear", "Casual", "Elegant", "Designer"]
+fabric = ["Cotton", "Silk", "Chiffon", "Denim", "Rayon", "Linen"]
+
+def generate_fashion_design():
+    design = {
+        "Color": random.choice(colors),
+        "Pattern": random.choice(patterns),
+        "Outfit": random.choice(outfits),
+        "Style": random.choice(styles),
+        "Fabric": random.choice(fabric)
+    }
+    return design
+
+print("\n AI Fashion Designer – Generated Designs\n")
+
+# Generate 5 sample designs
+for i in range(1, 6):
+    d = generate_fashion_design()
+    print(f"Design {i}:")
+    print(f"   Outfit Type : {d['Outfit']}")
+    print(f"   Style       : {d['Style']}")
+    print(f"   Color       : {d['Color']}")
+    print(f"   Pattern     : {d['Pattern']}")
+    print(f"   Fabric      : {d['Fabric']}\n")
